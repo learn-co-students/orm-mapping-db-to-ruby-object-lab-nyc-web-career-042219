@@ -1,4 +1,5 @@
 require_relative 'spec_helper'
+require 'pry'
 
 describe Student do
 
@@ -109,6 +110,7 @@ describe Student do
         sam.save
 
         all_but_12th = Student.students_below_12th_grade
+        # binding.pry
         expect(all_but_12th.size).to eq(1)
         expect(all_but_12th.first.name).to eq('Sam')
       end
